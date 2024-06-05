@@ -1,15 +1,19 @@
-﻿
+﻿@model CreateProductCommand
 @{
     Layout = null;
 }
 
-<!DOCTYPE html>
+<link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
 
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>CreateProduct</title>
-</head>
-<body>
-</body>
-</html>
+<form method="post">
+    <div class="container">
+        <br /><br />
+        <label>Ürün Adı</label>
+        <input type="text" asp-for="ProductName" class="form-control" />
+        <br />
+        <label>Ürün Fiyatı</label>
+        <input type="text" asp-for="ProductPrice" class="form-control" />
+        <br />
+        <button class="btn btn-primary">Ürünü Kaydet</button>
+    </div>
+</form>

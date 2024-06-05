@@ -9,6 +9,8 @@ builder.Services.AddScoped<GetCategoryQueryHandler>();
 builder.Services.AddScoped<GetProductQueryHandler>();
 builder.Services.AddScoped<CreateCategoryCommandHandler>();
 builder.Services.AddScoped<RemoveCategoryCommandHandler>();
+builder.Services.AddScoped<CreateProductCommandHandler>();
+builder.Services.AddScoped<RemoveProductCommandHandler>();
 
 builder.Services.AddControllersWithViews();
 
