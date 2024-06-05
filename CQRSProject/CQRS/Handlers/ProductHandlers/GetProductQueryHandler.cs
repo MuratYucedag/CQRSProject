@@ -1,7 +1,7 @@
 ﻿using CQRSProject.CQRS.Results;
 using CQRSProject.DAL;
 
-namespace CQRSProject.CQRS.Handlers
+namespace CQRSProject.CQRS.Handlers.ProductHandlers
 {
     public class GetProductQueryHandler
     {

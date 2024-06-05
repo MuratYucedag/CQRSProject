@@ -1,4 +1,5 @@
-using CQRSProject.CQRS.Handlers;
+using CQRSProject.CQRS.Handlers.CategoryHandlers;
+using CQRSProject.CQRS.Handlers.ProductHandlers;
 using CQRSProject.DAL;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -6,6 +7,8 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddDbContext<Context>();
 builder.Services.AddScoped<GetCategoryQueryHandler>();
 builder.Services.AddScoped<GetProductQueryHandler>();
+builder.Services.AddScoped<CreateCategoryCommandHandler>();
+builder.Services.AddScoped<RemoveCategoryCommandHandler>();
 
 builder.Services.AddControllersWithViews();
 
