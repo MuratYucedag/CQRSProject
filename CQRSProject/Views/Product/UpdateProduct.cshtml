@@ -1,0 +1,23 @@
+﻿@model GetProductByIdQueryResult
+@{
+    Layout = null;
+}
+
+<link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+<form method="post">
+    <div class="container">
+        <br /><br />
+        <div class="alert alert-success">Ürün Güncelleme Sayfası</div>
+        <label>Ürün Id</label>
+        <input type="text" asp-for="ProductId" readonly class="form-control" />
+        <br />
+        <label>Ürün Adı</label>
+        <input type="text" asp-for="ProductName" class="form-control" />
+        <br />
+        <label>Ürün Fiyatı</label>
+        <input type="text" asp-for="ProductPrice" class="form-control" />
+        <br />
+        <button class="btn btn-success">Ürünü Güncelle</button>
+    </div>
+</form>
