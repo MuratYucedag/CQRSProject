@@ -1,0 +1,32 @@
+﻿@model List<CQRSProject.MediatorPattern.Results.GetEmployeeQueryResult>
+
+@{
+    Layout = null;
+}
+
+<link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+<div class="container">
+    <br /><br />
+    <div class="alert alert-primary">Personel Tablosu</div>
+    <table class="table table-hover">
+        <tr>
+            <th>#</th>
+            <th>Personel Adı Soyadı</th>
+            <th>Maaş</th>
+            <th>Sil</th>
+            <th>Güncelle</th>
+        </tr>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.EmployeeID</td>
+                <td>@item.Name @item.Surname</td>
+                <td>@item.Salary</td>
+                <td><a href="/Employee/RemoveEmployee/@item.EmployeeID" class="btn btn-danger">Sil</a></td>
+                <td><a href="/Employee/UpdateEmployee/@item.EmployeeID" class="btn btn-success">Güncelle</a></td>
+            </tr>
+        }
+    </table>
+    <a href="/Employee/CreateEmployee/" class="btn btn-primary">Yeni Personel Girişi</a>
+</div>

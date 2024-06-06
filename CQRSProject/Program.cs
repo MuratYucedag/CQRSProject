@@ -1,6 +1,7 @@
 using CQRSProject.CQRS.Handlers.CategoryHandlers;
 using CQRSProject.CQRS.Handlers.ProductHandlers;
 using CQRSProject.DAL;
+using System.Reflection;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -15,6 +16,8 @@ builder.Services.AddScoped<GetCategoryByIdQueryHandler>();
 builder.Services.AddScoped<GetProductByIdQueryHandler>();
 builder.Services.AddScoped<UpdateCategoryCommandHandler>();
 builder.Services.AddScoped<UpdateProductCommandHandler>();
+
+builder.Services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(Assembly.GetExecutingAssembly()));
 
 builder.Services.AddControllersWithViews();
 

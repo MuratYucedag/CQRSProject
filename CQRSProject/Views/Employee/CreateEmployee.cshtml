@@ -1,0 +1,24 @@
+﻿@model CQRSProject.MediatorPattern.Commands.CreateEmployeeCommand
+
+@{
+    Layout = null;
+}
+
+<link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+<form method="post">
+    <div class="container">
+        <br /><br />
+        <div class="alert alert-primary">Yeni Personel Ekleme Sayfası</div>
+        <label>Personel Adı</label>
+        <input type="text" asp-for="Name" class="form-control" />
+        <br />
+        <label>Personel Soyadı</label>
+        <input type="text" asp-for="Surname" class="form-control" />
+        <br />
+        <label>Personel Maaş</label>
+        <input type="text" asp-for="Salary" class="form-control" />
+        <br />
+        <button class="btn btn-primary">Personeli Kaydet</button>
+    </div>
+</form>
